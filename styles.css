@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff77aa, #00aaff); /* Degradado de rosa a celeste */
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Evita el scroll si el confeti se sale del viewport */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.header {
+    margin-top: 50px;
+}
+
+.countdown {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.reveal-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.reveal-button:hover {
+    background-color: #0056b3;
+}
+
+.reveal-message {
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+@keyframes confetti {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: confetti 2s linear infinite;
+}
+
+.confetti.blue { background-color: #00aaff; }
+.confetti.pink { background-color: #ff77aa; }
+.confetti.yellow { background-color: #ffcc00; }
+.confetti.green { background-color: #66ff66; }
