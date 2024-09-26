@@ -1,17 +1,12 @@
 function revealGender() {
-    // Define el nombre y género
-    const names = {
-        boy: 'Francisco',
-        girl: 'Catalina'
-    };
-    const isBoy = Math.random() > 0.5;
-    const name = isBoy ? names.boy : names.girl;
+    // Definir el nombre de revelación fijo
+    const name = 'Catalina';
     
     // Mostrar el mensaje de revelación
     document.getElementById('revealMessage').innerText = `¡Es ${name}!`;
     
-    // Crear animación de confeti
-    createConfetti(isBoy);
+    // Crear animación de confeti con colores de niña
+    createConfetti(false);  // false para los colores de niña
 }
 
 function createConfetti(isBoy) {
@@ -29,12 +24,12 @@ function createConfetti(isBoy) {
         // Eliminar confetti después de 2 segundos
         setTimeout(() => {
             confetti.remove();
-        }, 2000);
+        }, 3000);
     }
 }
 
 // Contador regresivo desde el 1 de marzo de 2025
-const countdownDate = new Date('March 1, 2025 00:00:00').getTime();
+const countdownDate = new Date('February 25, 2025 00:00:00').getTime();
 
 const countdownFunction = setInterval(() => {
     const now = new Date().getTime();
@@ -51,4 +46,4 @@ const countdownFunction = setInterval(() => {
         clearInterval(countdownFunction);
         document.getElementById('countdown').innerHTML = "¡Es hora de revelar!";
     }
-}, 1000);
+}, 1000)

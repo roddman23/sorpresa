@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     background: linear-gradient(to right, #c9849d, #74c5ee); /* Degradado de rosa a celeste */
     color: #ffffff;
     text-align: center;
@@ -10,30 +10,44 @@ body {
 
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     position: relative;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-size: 10px;
 }
+
+
 
 .header {
     margin-top: 50px;
+    padding: 15px; /* Ajusta el padding para que el contenido esté más compacto */
+    border-radius: 10px;
+    font-size: 18px; /* Reduce el tamaño del texto del encabezado */
+}
+.h1{
+    font-size: 18px;
 }
 
 .countdown {
-    font-size: 24px;
-    margin: 20px 0;
+    font-size: 18px; /* Reduce el tamaño del texto del contador */
+    margin: 15px 0;
 }
 
 .reveal-button {
-    padding: 10px 20px;
-    font-size: 18px;
+    padding: 8px 16px; /* Ajusta el padding del botón */
+    font-size: 16px; /* Reduce el tamaño del texto del botón */
     color: #ffffff;
     background-color: #007bff;
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.1s;
 }
 
 .reveal-button:hover {
@@ -41,8 +55,8 @@ body {
 }
 
 .reveal-message {
-    font-size: 36px;
-    margin-top: 20px;
+    font-size: 28px; /* Reduce el tamaño del texto del mensaje de revelación */
+    margin-top: 15px;
 }
 
 @keyframes confetti {
@@ -58,7 +72,4 @@ body {
     animation: confetti 2s linear infinite;
 }
 
-.confetti.blue { background-color: #00aaff; }
 .confetti.pink { background-color: #ff77aa; }
-.confetti.yellow { background-color: #ffcc00; }
-.confetti.green { background-color: #66ff66; }
